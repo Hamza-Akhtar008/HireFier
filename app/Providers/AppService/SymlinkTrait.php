@@ -58,7 +58,11 @@ trait SymlinkTrait
 				if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 					Artisan::call('storage:link');
 				} else {
-					symlink('../storage/app/public', './storage');
+					if (function_exists('symlink')) {
+    symlink('../storage/app/public', './storage');
+} else {
+    Artisan::call('storage:link');
+}
 				}
 			}
 		} catch (Exception $e) {
