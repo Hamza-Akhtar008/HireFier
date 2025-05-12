@@ -1,0 +1,12 @@
+.quarantine/
+.tmb/
+*thumbnails/
+*thumb-*
+/app/logo/*
+/app/categories/custom/*
+/avatars/*
+/files/*
+/resumes/*
+/pictures/
+/demo/
+!.gitignore

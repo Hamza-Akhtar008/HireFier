@@ -1,0 +1,351 @@
+name: Resumes
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/resumes
+    metadata:
+      groupName: Resumes
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List resumes'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      q:
+        name: q
+        description: 'Get the resume list related to the entered keyword.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      belongLoggedUser:
+        name: belongLoggedUser
+        description: 'Force users to be logged to get data that belongs to him. Resume file and other column can be retrieved - Possible value: 0 or 1.'
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      sort:
+        name: sort
+        description: 'The sorting parameter (Order by DESC with the given column. Use "-" as prefix to order by ASC). Possible values: created_at, name.'
+        required: false
+        example: created_at
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      perPage:
+        name: perPage
+        description: 'Items per page. Can be defined globally from the admin settings. Cannot be exceeded 100.'
+        required: false
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      q: null
+      belongLoggedUser: false
+      sort: created_at
+      perPage: 2
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":{"data":[{"id":451,"country_code":"IT","name":"Atque ipsum","country_flag_url":"https:\/\/jobclass.laraclassifier.local\/images\/flags\/rectangle\/16\/it.png"},{"id":450,"country_code":"DE","name":"Sapiente sapiente adipisci","country_flag_url":"https:\/\/jobclass.laraclassifier.local\/images\/flags\/rectangle\/16\/de.png"}],"links":{"first":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=1","last":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=226","prev":null,"next":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=2"},"meta":{"current_page":1,"from":1,"last_page":226,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=1","label":"1","active":true},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=2","label":"2","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=3","label":"3","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=4","label":"4","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=5","label":"5","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=6","label":"6","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=7","label":"7","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=8","label":"8","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=9","label":"9","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=10","label":"10","active":false},{"url":null,"label":"...","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=225","label":"225","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=226","label":"226","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/resumes?page=2","label":"Next &raquo;","active":false}],"path":"https:\/\/jobclass.laraclassifier.local\/api\/resumes","per_page":2,"to":2,"total":451}}}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/resumes/{id}'
+    metadata:
+      groupName: Resumes
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get resume'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters:
+      id:
+        name: id
+        description: "The resume's ID."
+        required: true
+        example: 269
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 269
+    queryParameters:
+      belongLoggedUser:
+        name: belongLoggedUser
+        description: 'Force users to be logged to get data that belongs to him - Possible value: 0 or 1.'
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      embed:
+        name: embed
+        description: 'The Comma-separated list of the company relationships for Eager Loading - Possible values: user.'
+        required: false
+        example: user
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      belongLoggedUser: false
+      embed: user
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: '{"success":false,"message":"Some tables of the database are absent.\nSQLSTATE[42S02]: Base table or view not found: 1146 Table ''jobclass.jc_user_id'' doesn''t exist (Connection: mysql, SQL: select `jc_users`.*, `jc_user_id`.`id` as `pivot_id`, `jc_user_id`.`user_id` as `pivot_user_id` from `jc_users` inner join `jc_user_id` on `jc_users`.`id` = `jc_user_id`.`user_id` where `jc_user_id`.`id` in (269))\n1\/ Remove all tables from the database (if existing)\n2\/ Delete the \/.env file (required before re-installation)\n3\/ and reload this page -or- go to install URL: https:\/\/jobclass.laraclassifier.local\/install.\nBE CAREFUL: If your site is already in production, you will lose all your data in both cases.\n","result":null,"error":"Some tables of the database are absent.\nSQLSTATE[42S02]: Base table or view not found: 1146 Table ''jobclass.jc_user_id'' doesn''t exist (Connection: mysql, SQL: select `jc_users`.*, `jc_user_id`.`id` as `pivot_id`, `jc_user_id`.`user_id` as `pivot_user_id` from `jc_users` inner join `jc_user_id` on `jc_users`.`id` = `jc_user_id`.`user_id` where `jc_user_id`.`id` in (269))\n1\/ Remove all tables from the database (if existing)\n2\/ Delete the <code>\/.env<\/code> file (required before re-installation)\n3\/ and reload this page -or- go to install URL: <a href=\"https:\/\/jobclass.laraclassifier.local\/install\">https:\/\/jobclass.laraclassifier.local\/install<\/a>.\nBE CAREFUL: If your site is already in production, you will lose all your data in both cases.\n"}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6a6dZV1g83cPafeDhkE45vb'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/resumes
+    metadata:
+      groupName: Resumes
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store resume'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      'resume[].country_code':
+        name: 'resume[].country_code'
+        description: "The code of the user's country."
+        required: true
+        example: US
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'resume[].name':
+        name: 'resume[].name'
+        description: "The resume's name."
+        required: false
+        example: 'Software Engineer'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'resume[].filename':
+        name: 'resume[].filename'
+        description: "The resume's attached file."
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer ka6PfE48a3cgbe1Vvhd56DZ'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/resumes/{id}'
+    metadata:
+      groupName: Resumes
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update resume'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters:
+      id:
+        name: id
+        description: "The resume's ID."
+        required: true
+        example: 111111
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 111111
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      'resume[].name':
+        name: 'resume[].name'
+        description: "The resume's name."
+        required: false
+        example: 'Software Engineer'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'resume[].filename':
+        name: 'resume[].filename'
+        description: "The resume's attached file."
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8fPa41EcgZ6vhV3be5aDkd6'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/resumes/{ids}'
+    metadata:
+      groupName: Resumes
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete resume(s)'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters:
+      ids:
+        name: ids
+        description: 'The ID or comma-separated IDs list of resume(s).'
+        required: true
+        example: '111111,222222,333333'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      ids: '111111,222222,333333'
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Dvak8f6P6EZa4db3e15Vcgh'
+    controller: null
+    method: null
+    route: null
+    custom: []

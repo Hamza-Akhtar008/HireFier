@@ -1,0 +1,192 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\ReportType;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class ReportTypeSeeder extends Seeder
+{
+	/**
+	 * Run the database seeds.
+	 *
+	 * @return void
+	 */
+	public function run()
+	{
+		$entries = [
+			[
+				'name' => [
+					'en' => 'Fraud',
+					'fr' => 'Fraude',
+					'es' => 'Fraude',
+					'ar' => 'تزوير',
+					'de' => 'Betrug',
+					'it' => 'Frode',
+					'ru' => 'Мошенничество',
+					'nl' => 'Fraude',
+					'nb' => 'Bedrageri',
+					'uk' => 'Шахрайство',
+					'pl' => 'Oszustwo',
+					'ro' => 'Fraudă',
+					'el' => 'Απάτη',
+					'pt' => 'Fraude',
+					'da' => 'Bedrageri',
+					'sv' => 'Bedrägeri',
+					'fi' => 'Petos',
+					'hu' => 'Csalás',
+					'sr' => 'Превара',
+					'cs' => 'Podvod',
+					'bg' => 'Измама',
+					'hr' => 'Prijevara',
+					'et' => 'Pettus',
+					'lt' => 'Sukčiavimas',
+					'lv' => 'Krāpšana',
+					'sk' => 'Podvod',
+					'sl' => 'Goljufija',
+					'is' => 'Svik',
+					'sq' => 'Mashtrim',
+				],
+			],
+			[
+				'name' => [
+					'en' => 'Duplicate',
+					'fr' => 'Dupliquée',
+					'es' => 'Duplicar',
+					'ar' => 'مكرر',
+					'de' => 'Duplikat',
+					'it' => 'Duplicato',
+					'ru' => 'Дубликат',
+					'nl' => 'Duplicaat',
+					'nb' => 'Kopiere',
+					'uk' => 'дублікат',
+					'pl' => 'Duplikat',
+					'ro' => 'Duplicat',
+					'el' => 'Αντίγραφο',
+					'pt' => 'Duplicado',
+					'da' => 'Kopi',
+					'sv' => 'Dubblett',
+					'fi' => 'Kopio',
+					'hu' => 'Másolat',
+					'sr' => 'Дупликат',
+					'cs' => 'Duplikát',
+					'bg' => 'Дубликат',
+					'hr' => 'Duplikat',
+					'et' => 'Duplikaat',
+					'lt' => 'Dublikatas',
+					'lv' => 'Dublikāts',
+					'sk' => 'Duplikát',
+					'sl' => 'Duplikat',
+					'is' => 'Afrit',
+					'sq' => 'Duplikat',
+				],
+			],
+			[
+				'name' => [
+					'en' => 'Spam',
+					'fr' => 'Indésirable',
+					'es' => 'indeseable',
+					'ar' => 'بريد مؤذي',
+					'de' => 'Spam',
+					'it' => 'Spam',
+					'ru' => 'Спам',
+					'nl' => 'Spam',
+					'nb' => 'Spam',
+					'uk' => 'Спам',
+					'pl' => 'Spam',
+					'ro' => 'Spam',
+					'el' => 'Ανεπιθύμητη αλληλογραφία',
+					'pt' => 'Spam',
+					'da' => 'Spam',
+					'sv' => 'Skräppost',
+					'fi' => 'Roskaposti',
+					'hu' => 'Levélszemét',
+					'sr' => 'Спам',
+					'cs' => 'Spam',
+					'bg' => 'Спам',
+					'hr' => 'Neželjena pošta',
+					'et' => 'Rämpspost',
+					'lt' => 'Šlamštas',
+					'lv' => 'Mēstules',
+					'sk' => 'Spam',
+					'sl' => 'Neželena pošta',
+					'is' => 'Ruslpóstur',
+					'sq' => 'Spam',
+				],
+			],
+			[
+				'name' => [
+					'en' => 'Wrong category',
+					'fr' => 'Mauvaise categorie',
+					'es' => 'Categoría incorrecta',
+					'ar' => 'فئة خاطئة',
+					'de' => 'Falsche Kategorie',
+					'it' => 'Categoria sbagliata',
+					'ru' => 'Неправильная категория',
+					'nl' => 'Verkeerde categorie',
+					'nb' => 'Feil kategori',
+					'uk' => 'Неправильна категорія',
+					'pl' => 'Zła kategoria',
+					'ro' => 'Categorie greșită',
+					'el' => 'Λάθος κατηγορία',
+					'pt' => 'Categoria errada',
+					'da' => 'Forkert kategori',
+					'sv' => 'Fel kategori',
+					'fi' => 'Väärä kategoria',
+					'hu' => 'Helytelen kategória',
+					'sr' => 'Погрешна категорија',
+					'cs' => 'Špatná kategorie',
+					'bg' => 'Грешна категория',
+					'hr' => 'Pogrešna kategorija',
+					'et' => 'Vale kategooria',
+					'lt' => 'Neteisinga kategorija',
+					'lv' => 'Nepareiza kategorija',
+					'sk' => 'Zlá kategória',
+					'sl' => 'Napačna kategorija',
+					'is' => 'Röng flokkun',
+					'sq' => 'Kategori e gabuar',
+				],
+			],
+			[
+				'name' => [
+					'en' => 'Other',
+					'fr' => 'Autre',
+					'es' => 'Otro',
+					'ar' => 'آخر',
+					'de' => 'Andere',
+					'it' => 'Altro',
+					'ru' => 'Другой',
+					'nl' => 'Ander',
+					'nb' => 'Annen',
+					'uk' => 'інше',
+					'pl' => 'Inny',
+					'ro' => 'Alte',
+					'el' => 'Αλλος',
+					'pt' => 'Outro',
+					'da' => 'Andet',
+					'sv' => 'Annat',
+					'fi' => 'Muu',
+					'hu' => 'Egyéb',
+					'sr' => 'Друго',
+					'cs' => 'Jiný',
+					'bg' => 'Други',
+					'hr' => 'Ostalo',
+					'et' => 'Muu',
+					'lt' => 'Kitas',
+					'lv' => 'Cits',
+					'sk' => 'Iný',
+					'sl' => 'Drugo',
+					'is' => 'Annað',
+					'sq' => 'Tjetër',
+				],
+			],
+		];
+		
+		$tableName = (new ReportType())->getTable();
+		foreach ($entries as $entry) {
+			$entry = arrayTranslationsToJson($entry);
+			$entryId = DB::table($tableName)->insertGetId($entry);
+		}
+	}
+}

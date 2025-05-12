@@ -1,0 +1,809 @@
+name: Companies
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/companies
+    metadata:
+      groupName: Companies
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List companies'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      hasPosts:
+        name: hasPosts
+        description: 'Do entries have Post(s)? - Possible value: 0 or 1.'
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      countPosts:
+        name: countPosts
+        description: 'Count posts number for each entry? - Possible value: 0 or 1.'
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      belongLoggedUser:
+        name: belongLoggedUser
+        description: 'Force users to be logged to get data that belongs to him - Possible value: 0 or 1.'
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      q:
+        name: q
+        description: 'Get the company list related to the entered keyword.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      sort:
+        name: sort
+        description: 'The sorting parameter (Order by DESC with the given column. Use "-" as prefix to order by ASC). Possible values: created_at, name.'
+        required: false
+        example: created_at
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      perPage:
+        name: perPage
+        description: 'Items per page. Can be defined globally from the admin settings. Cannot be exceeded 100.'
+        required: false
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      hasPosts: false
+      countPosts: false
+      belongLoggedUser: false
+      q: null
+      sort: created_at
+      perPage: 2
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":{"data":[{"id":702,"user_id":1134,"name":"Bins Inc","logo_path":"files\/ch\/1134\/38eeca3f71721963d19f67e0f2ef63bd.png","description":"Nobis et et alias eligendi dolor. Quia voluptatem non ex voluptates. Unde qui dolor et libero nostrum et illum distinctio. Pariatur voluptatum sit consequatur dolor saepe quia quis necessitatibus.","country_code":"CH","city_id":6753,"address":null,"phone":"+417676502480","fax":"+1 (435) 613-3977","email":"will.loraine@oconner.com","website":"http:\/\/qui.com","facebook":null,"twitter":null,"linkedin":null,"pinterest":null,"logo_url":{"full":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/ch\/1134\/thumbnails\/320x240-38eeca3f71721963d19f67e0f2ef63bd.png","small":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/ch\/1134\/thumbnails\/120x90-38eeca3f71721963d19f67e0f2ef63bd.png","medium":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/ch\/1134\/thumbnails\/320x240-38eeca3f71721963d19f67e0f2ef63bd.png","large":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/ch\/1134\/thumbnails\/816x460-38eeca3f71721963d19f67e0f2ef63bd.png"},"posts_count":0,"country_flag_url":"https:\/\/jobclass.laraclassifier.local\/images\/flags\/rectangle\/16\/ch.png"},{"id":701,"user_id":965,"name":"Monahan-Boehm","logo_path":"files\/mx\/965\/e6526871113f4e6ed69eb1b55bdfc28a.png","description":"Ab asperiores temporibus incidunt. Dolores impedit in tempore ipsam qui. Facere cumque sapiente soluta sed. Quidem consequuntur ad eos omnis.","country_code":"MX","city_id":27756,"address":null,"phone":"+525886205342","fax":"+1-269-714-6356","email":"tyrique50@bauch.org","website":"http:\/\/ut.com","facebook":null,"twitter":null,"linkedin":null,"pinterest":null,"logo_url":{"full":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/mx\/965\/thumbnails\/320x240-e6526871113f4e6ed69eb1b55bdfc28a.png","small":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/mx\/965\/thumbnails\/120x90-e6526871113f4e6ed69eb1b55bdfc28a.png","medium":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/mx\/965\/thumbnails\/320x240-e6526871113f4e6ed69eb1b55bdfc28a.png","large":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/mx\/965\/thumbnails\/816x460-e6526871113f4e6ed69eb1b55bdfc28a.png"},"posts_count":0,"country_flag_url":"https:\/\/jobclass.laraclassifier.local\/images\/flags\/rectangle\/16\/mx.png"}],"links":{"first":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=1","last":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=351","prev":null,"next":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=2"},"meta":{"current_page":1,"from":1,"last_page":351,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=1","label":"1","active":true},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=2","label":"2","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=3","label":"3","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=4","label":"4","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=5","label":"5","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=6","label":"6","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=7","label":"7","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=8","label":"8","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=9","label":"9","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=10","label":"10","active":false},{"url":null,"label":"...","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=350","label":"350","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=351","label":"351","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=2","label":"Next &raquo;","active":false}],"path":"https:\/\/jobclass.laraclassifier.local\/api\/companies","per_page":2,"to":2,"total":702}}}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/companies/{id}'
+    metadata:
+      groupName: Companies
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get company'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters:
+      id:
+        name: id
+        description: "The company's ID."
+        required: true
+        example: 44
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 44
+    queryParameters:
+      belongLoggedUser:
+        name: belongLoggedUser
+        description: 'Check if entry is belonged the logged user - Possible value: 0 or 1.'
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      embed:
+        name: embed
+        description: 'The Comma-separated list of the company relationships for Eager Loading - Possible values: user,city,subAdmin1,subAdmin2.'
+        required: false
+        example: user
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      belongLoggedUser: false
+      embed: user
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":{"id":44,"user_id":3,"name":"Nader-Stokes","logo_path":"files\/us\/3\/78c2fb85a39a696698d953bac939896e.png","description":"Modi velit quia quod recusandae esse totam. Quas quia alias placeat debitis possimus debitis. Reiciendis aliquam blanditiis expedita voluptatem eaque delectus aut. Et quod necessitatibus facilis. Aliquid saepe sequi deleniti sunt.","country_code":"US","city_id":48801,"address":null,"phone":"+16571289881","fax":"660.274.7350","email":"jacobson.rylan@example.net","website":"http:\/\/nihil.com","facebook":null,"twitter":null,"linkedin":null,"pinterest":null,"logo_url":{"full":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/us\/3\/thumbnails\/320x240-78c2fb85a39a696698d953bac939896e.png","small":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/us\/3\/thumbnails\/120x90-78c2fb85a39a696698d953bac939896e.png","medium":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/us\/3\/thumbnails\/320x240-78c2fb85a39a696698d953bac939896e.png","large":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/us\/3\/thumbnails\/816x460-78c2fb85a39a696698d953bac939896e.png"},"posts_count":0,"country_flag_url":"https:\/\/jobclass.laraclassifier.local\/images\/flags\/rectangle\/16\/us.png","user":{"id":3,"name":"Company Demo","username":"democompany","two_factor_enabled":false,"two_factor_method":"email","updated_at":"2024-11-09T13:16:13.000000Z","original_updated_at":"2024-11-09 13:16:13","original_last_activity":null,"created_at_formatted":"Oct 12th, 2024 at 16:58","photo_url":"https:\/\/jobclass.laraclassifier.local\/storage\/avatars\/us\/3\/thumbnails\/800x800-af358a11616a01adb3f0dd10e99c34a0.jpg","p_is_online":false,"country_flag_url":"https:\/\/jobclass.laraclassifier.local\/images\/flags\/rectangle\/16\/us.png"}}}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/companies
+    metadata:
+      groupName: Companies
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store company'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      company:
+        name: company
+        description: ''
+        required: false
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      company.name:
+        name: company.name
+        description: ''
+        required: true
+        example: voluptatum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      company.description:
+        name: company.description
+        description: ''
+        required: true
+        example: a
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      company.website:
+        name: company.website
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://www.roberts.info/vitae-quia-tenetur-velit-omnis.html'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      company.facebook:
+        name: company.facebook
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://www.wolf.com/numquam-aut-ut-repellendus-saepe-autem'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      company.twitter:
+        name: company.twitter
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://www.stroman.com/vitae-est-optio-dolorum-et.html'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      company.linkedin:
+        name: company.linkedin
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://www.turner.com/'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      company.pinterest:
+        name: company.pinterest
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://www.deckow.com/dolorem-enim-sequi-ducimus-labore-aut.html'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      'company[].country_code':
+        name: 'company[].country_code'
+        description: "The code of the company's country."
+        required: true
+        example: US
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].name':
+        name: 'company[].name'
+        description: "The company's name."
+        required: true
+        example: 'Foo Inc'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].logo_path':
+        name: 'company[].logo_path'
+        description: "The company's logo."
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'company[].description':
+        name: 'company[].description'
+        description: "The company's description."
+        required: true
+        example: 'Nostrum quia est aut quas. Consequuntur ut quis odit voluptatem laborum quia.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].city_id':
+        name: 'company[].city_id'
+        description: "The company city's ID."
+        required: false
+        example: 10
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'company[].address':
+        name: 'company[].address'
+        description: "The company's address."
+        required: false
+        example: "5 rue de l'Echelle"
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].phone':
+        name: 'company[].phone'
+        description: "The company's phone number."
+        required: false
+        example: '+17656766467'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].fax':
+        name: 'company[].fax'
+        description: "The company's fax number."
+        required: false
+        example: '+80159266712'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].email':
+        name: 'company[].email'
+        description: "The company's email address."
+        required: false
+        example: contact@domain.tld
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].website':
+        name: 'company[].website'
+        description: "The company's website URL."
+        required: false
+        example: 'https://domain.tld'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].facebook':
+        name: 'company[].facebook'
+        description: "The company's Facebook URL."
+        required: false
+        example: nemo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'company[].twitter':
+        name: 'company[].twitter'
+        description: "The company's Twitter URL."
+        required: false
+        example: quia
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'company[].linkedin':
+        name: 'company[].linkedin'
+        description: "The company's LinkedIn URL."
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'company[].pinterest':
+        name: 'company[].pinterest'
+        description: "The company's Pinterest URL."
+        required: false
+        example: animi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      company:
+        name: voluptatum
+        description: a
+        website: 'http://www.roberts.info/vitae-quia-tenetur-velit-omnis.html'
+        facebook: 'http://www.wolf.com/numquam-aut-ut-repellendus-saepe-autem'
+        twitter: 'http://www.stroman.com/vitae-est-optio-dolorum-et.html'
+        linkedin: 'http://www.turner.com/'
+        pinterest: 'http://www.deckow.com/dolorem-enim-sequi-ducimus-labore-aut.html'
+        0:
+          country_code: US
+          name: 'Foo Inc'
+          description: 'Nostrum quia est aut quas. Consequuntur ut quis odit voluptatem laborum quia.'
+          city_id: 10
+          address: "5 rue de l'Echelle"
+          phone: '+17656766467'
+          fax: '+80159266712'
+          email: contact@domain.tld
+          website: 'https://domain.tld'
+          facebook: nemo
+          twitter: quia
+          linkedin: architecto
+          pinterest: animi
+    fileParameters:
+      company:
+        -
+          logo_path: null
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer aEDVdabghfe8Pc46v1k5Z36'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/companies/{id}'
+    metadata:
+      groupName: Companies
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update company'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters:
+      id:
+        name: id
+        description: "The company's ID."
+        required: true
+        example: 111111
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 111111
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      company:
+        name: company
+        description: ''
+        required: false
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      company.name:
+        name: company.name
+        description: ''
+        required: true
+        example: expedita
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      company.description:
+        name: company.description
+        description: ''
+        required: true
+        example: et
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      company.website:
+        name: company.website
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://www.predovic.net/ut-aspernatur-sit-dicta-et-aspernatur-porro'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      company.facebook:
+        name: company.facebook
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://hamill.com/aut-omnis-modi-sapiente-qui-autem.html'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      company.twitter:
+        name: company.twitter
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://hessel.net/perferendis-molestiae-perferendis-fuga-ratione-expedita-nostrum'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      company.linkedin:
+        name: company.linkedin
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://kling.biz/'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      company.pinterest:
+        name: company.pinterest
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://berge.com/qui-ut-deleniti-debitis-sed'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      'company[].country_code':
+        name: 'company[].country_code'
+        description: "The code of the company's country."
+        required: true
+        example: US
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].name':
+        name: 'company[].name'
+        description: "The company's name."
+        required: true
+        example: 'Foo Inc'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].logo_path':
+        name: 'company[].logo_path'
+        description: "The company's logo."
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'company[].description':
+        name: 'company[].description'
+        description: "The company's description."
+        required: true
+        example: 'Nostrum quia est aut quas. Consequuntur ut quis odit voluptatem laborum quia.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].city_id':
+        name: 'company[].city_id'
+        description: "The company city's ID."
+        required: false
+        example: 19
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'company[].address':
+        name: 'company[].address'
+        description: "The company's address."
+        required: false
+        example: "5 rue de l'Echelle"
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].phone':
+        name: 'company[].phone'
+        description: "The company's phone number."
+        required: false
+        example: '+17656766467'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].fax':
+        name: 'company[].fax'
+        description: "The company's fax number."
+        required: false
+        example: '+80159266712'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].email':
+        name: 'company[].email'
+        description: "The company's email address."
+        required: false
+        example: contact@domain.tld
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].website':
+        name: 'company[].website'
+        description: "The company's website URL."
+        required: false
+        example: 'https://domain.tld'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'company[].facebook':
+        name: 'company[].facebook'
+        description: "The company's Facebook URL."
+        required: false
+        example: quo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'company[].twitter':
+        name: 'company[].twitter'
+        description: "The company's Twitter URL."
+        required: false
+        example: natus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'company[].linkedin':
+        name: 'company[].linkedin'
+        description: "The company's LinkedIn URL."
+        required: false
+        example: ut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'company[].pinterest':
+        name: 'company[].pinterest'
+        description: "The company's Pinterest URL."
+        required: false
+        example: aliquid
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      company:
+        name: expedita
+        description: et
+        website: 'http://www.predovic.net/ut-aspernatur-sit-dicta-et-aspernatur-porro'
+        facebook: 'http://hamill.com/aut-omnis-modi-sapiente-qui-autem.html'
+        twitter: 'http://hessel.net/perferendis-molestiae-perferendis-fuga-ratione-expedita-nostrum'
+        linkedin: 'http://kling.biz/'
+        pinterest: 'http://berge.com/qui-ut-deleniti-debitis-sed'
+        0:
+          country_code: US
+          name: 'Foo Inc'
+          description: 'Nostrum quia est aut quas. Consequuntur ut quis odit voluptatem laborum quia.'
+          city_id: 19
+          address: "5 rue de l'Echelle"
+          phone: '+17656766467'
+          fax: '+80159266712'
+          email: contact@domain.tld
+          website: 'https://domain.tld'
+          facebook: quo
+          twitter: natus
+          linkedin: ut
+          pinterest: aliquid
+    fileParameters:
+      company:
+        -
+          logo_path: null
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Vd36581vZfgk6hbP4DecEaa'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/companies/{ids}'
+    metadata:
+      groupName: Companies
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete company(ies)'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters:
+      ids:
+        name: ids
+        description: 'The ID or comma-separated IDs list of company(ies).'
+        required: true
+        example: '111111,222222,333333'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      ids: '111111,222222,333333'
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer bcgd654E6DvPZ8aa3fke1hV'
+    controller: null
+    method: null
+    route: null
+    custom: []
