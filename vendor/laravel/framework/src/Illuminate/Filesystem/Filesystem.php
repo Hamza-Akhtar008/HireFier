@@ -352,11 +352,17 @@ class Filesystem
     public function link($target, $link)
     {
         if (! windows_os()) {
-            if (function_exists('symlink')) {
-                return symlink($target, $link);
-            } else {
-                return exec('ln -s '.escapeshellarg($target).' '.escapeshellarg($link)) !== false;
-            }
+           if (function_exists('symlink')) {
+    return symlink($target, $link);
+} else {
+    // Use ln -s as a fallback for Unix-like systems
+    $command = 'ln -s ' . escapeshellarg($target) . ' ' . escapeshellarg($link);
+    $output = null;
+    $returnVar = null;
+
+    exec($command, $output, $returnVar);
+    return $returnVar === 0;
+}
         }
 
         $mode = $this->isDirectory($target) ? 'J' : 'H';
